@@ -2,3 +2,11 @@
   Override default refinery formatting below.
   Formatting applies to backend WYSIWYG editors and all frontend.
 */
+
+#logo {
+  margin-right: 0;
+  width: 95%;
+  height: 165px;
+  border-bottom: solid #AEAEAE 1px;
+/*  background: url(../images/logo.png) no-repeat;  */
+}

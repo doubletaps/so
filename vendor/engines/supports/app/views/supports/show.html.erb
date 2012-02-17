@@ -1,0 +1,31 @@
+<% content_for :body_content_title do %>
+  <%= @support.title %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  <section>
+    <p>
+      <%=raw @support.title %>
+    </p>
+  </section>
+  <section>
+    <p>
+      <%=raw @support.content %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :body_content_right do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="supports">
+      <% @supports.each do |support| %>
+        <li>
+          <%= link_to support.title, support_path(support) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

@@ -1,0 +1,21 @@
+nl:
+  plugins:
+    supports:
+      title: Supports
+  admin:
+    supports:
+      actions:
+        create_new: Maak een nieuwe Support
+        reorder: Wijzig de volgorde van de Supports
+        reorder_done: Klaar met het wijzingen van de volgorde van de Supports
+      records:
+        title: Supports
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Supports. Druk op 'Maak een nieuwe Support' om de eerste aan te maken.
+      support:
+        view_live_html: Bekijk deze support op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze support
+        delete: Verwijder deze support voor eeuwig
+  supports:
+    show:
+      other: Andere Supports

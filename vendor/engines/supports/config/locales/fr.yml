@@ -1,0 +1,25 @@
+fr:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    supports:
+      title: Supports
+  admin:
+    supports:
+      actions:
+        create_new: Créer un(e) nouve(au/l/lle) Support
+        reorder: Réordonner les Supports
+        reorder_done: Fin de réordonnancement des Supports
+      records:
+        title: Supports
+        sorry_no_results: "Désolé ! Aucun résultat."
+        no_items_yet: 'Il n''y a actuellement aucun(e) Support. Cliquer sur "Créer un(e) nouve(au/l/lle) Support" pour créer votre premi(er/ère) support.'
+      support:
+        view_live_html: Voir ce(t/tte) support <br/><em>(Ouvre une nouvelle fenêtre)</em>
+        edit: Modifier ce(t/tte) support
+        delete: Supprimer définitivement ce(t/tte) support
+  supports:
+    show:
+      other: Autres Supports

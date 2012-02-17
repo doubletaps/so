@@ -1,0 +1,21 @@
+nb:
+  plugins:
+    supports:
+      title: Supports
+  admin:
+    supports:
+      actions:
+        create_new: Lag en ny Support
+        reorder: Endre rekkefølgen på Supports
+        reorder_done: Ferdig å endre rekkefølgen Supports
+      records:
+        title: Supports
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Supports enda. Klikk på "Lag en ny Support" for å legge til din første support.
+      support:
+        view_live_html: Vis hvordan denne support ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne support
+        delete: Fjern denne support permanent
+  supports:
+    show:
+      other: Andre Supports

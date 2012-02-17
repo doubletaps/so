@@ -23,6 +23,10 @@ body {
 	padding: 0px;
 }
 
+#body_content_left .inner h1 {
+
+}
+
 #body_content_right {
 	width: 25%;
 	float: right;
@@ -35,12 +39,13 @@ body {
 
 #menu ul {
   list-style: none;
+  float: right;
 	margin: 2em;
   padding: 0px;
 }
 
 #menu ul li {
-  float: left;
+
   margin-right: 10px;
 }
 

@@ -1,0 +1,25 @@
+lolcat:
+  shared:
+    admin:
+      image_picker:
+        image: IMAGE
+  plugins:
+    supports:
+      title: Supports
+  admin:
+    supports:
+      actions:
+        create_new: CREATE NEW Support
+        reorder: REORDR Supports
+        reorder_done: DUN REORDERIN Supports
+      records:
+        title: Supports
+        sorry_no_results: SRY! THAR R NO RESULTS FINDZ.
+        no_items_yet: THAR R NO Supports YET. CLICK "CREATE NEW Support" 2 ADD UR FURST support.
+      support:
+        view_live_html: VIEW DIS support LIV <BR/><EM>(OPENS IN NEW WINDOW)</EM>
+        edit: EDIT DIS support
+        delete: REMOOV DIS support FOREVR
+  supports:
+    show:
+      other: OTHR Supports

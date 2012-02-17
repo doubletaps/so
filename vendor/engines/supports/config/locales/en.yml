@@ -1,0 +1,25 @@
+en:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    supports:
+      title: Supports
+  admin:
+    supports:
+      actions:
+        create_new: Add New Support
+        reorder: Reorder Supports
+        reorder_done: Done Reordering Supports
+      records:
+        title: Supports
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no Supports yet. Click "Add New Support" to add your first support.
+      support:
+        view_live_html: View this support live <br/><em>(opens in a new window)</em>
+        edit: Edit this support
+        delete: Remove this support forever
+  supports:
+    show:
+      other: Other Supports

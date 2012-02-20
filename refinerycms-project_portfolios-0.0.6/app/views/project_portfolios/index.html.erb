@@ -1,0 +1,32 @@
+<% content_for :javascripts do %>
+    <%= javascript_include_tag 'portfolio.min.js' %>
+<% end %>
+
+<% content_for :body_content_left do %>
+<div class="tags-div">
+    <ul id="tags">
+        <li class="button active"><a href="#">all</a></li>
+        <% @tags.each do |tag| %>
+            <li class="button"><a href="#"><%= tag.name %> </a></li>
+        <% end %>
+    </ul>
+</div>
+<div class="image-grid-div">
+<ul id="portfolios" class="image-grid">
+    <% @portfolios.each do |portfolio| %>
+    <li class="thumbnail-box" data-id="id-<%= portfolio.id %>" data-type="-<%= portfolio.tag_list.join('-').to_s.delete ' ' %>-">
+        <a class="popup-link" popup-id="<%= portfolio.id %>" href="#">
+            <%= render_thumbnail portfolio %>
+            <strong class="popup-project-title"><%= portfolio.project_name %></strong>
+        </a>
+    </li>
+    <% end %>
+</ul>
+</div>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>
+
+<% @portfolios.each do |portfolio| %>
+    <%= render :partial => 'popup_portfolio', :locals => {:portfolio => portfolio} %>
+<% end %>

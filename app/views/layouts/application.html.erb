@@ -12,6 +12,9 @@
       <section id='page'>
         <%= yield %>
       </section>
+      <section id='ruby'>
+        <%= yield :javascripts %>
+      </section>
       <footer>
         <%= render :partial => "/shared/footer" -%>
       </footer>

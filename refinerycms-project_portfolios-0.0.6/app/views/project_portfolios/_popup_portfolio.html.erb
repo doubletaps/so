@@ -1,0 +1,16 @@
+<div class="popup" style="display: none;" id="popup_content<%= portfolio.id %>">
+    <div class="popup-title">
+        <h2><%= portfolio.project_name %><span style="float: right;" class="bClose close_icon"></span></h2>
+    </div>
+    <div class="popup-content" style="clear: both;">
+        <%= render_title(portfolio) %>
+        <% if !portfolio.image.nil? %>
+        <div class="popup-img">
+            <%= render_image portfolio %>
+        </div>
+        <% end %>
+        <div class="popup-description">
+            <%= portfolio.description.html_safe %>
+        </div>
+    </div>
+</div>

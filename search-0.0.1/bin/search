@@ -1,0 +1,150 @@
+#! /usr/bin/env ruby
+
+require 'main'
+
+Main {
+  description <<-txt
+    search is a combination of find and grep.  it recursively traverses a
+    directory and searches all files for one or more regular expressions,
+    printing each file containing matches on stdout.  by default it ignores
+    repo directories like .cvs|.svn|.rcs
+  txt
+
+  argument('Directory', 'D'){ 
+    validate{|value| test ?d, value}
+  }
+
+  argument('re'){
+    arity -2
+  }
+
+  option('Filter', 'F'){
+    description 'limit searchs to files matching these regular expressions.  may be given more than once'
+    default %w[.*]
+    cast 'list_of_string'
+    argument_required
+  }
+
+  option('All', 'A'){
+    description '*all* Filters must match to be considered a success.  default is that *any* Filter pattern matching is considered a success' 
+    argument_required
+  }
+
+  option('Ignore', 'I'){
+    argument_required
+    default %w[ .svn .cvs .rcs ]
+    description "ignore any file matching this list of patterns default(.svn|.cvs|.rcs)"
+    cast 'list_of_string'
+  }
+
+  option('Sensitive', 'S'){
+    description 'conisder all Filters case sensitive.  default is case insensitive'
+  }
+
+  option('file', 'f'){
+    description 'load a file full of patterns, one per line'
+    argument_required
+  }
+
+  option('sensitive', 's'){
+    description 'conisder all patterns case sensitive.  default case insensitive'
+  }
+
+  option('any', 'a'){
+    description '*any* pattern match is considered success.  default is that *all* patterns must match' 
+  }
+
+  option('verbose', 'v'){
+    description 'print every match with lineno information'
+  }
+
+  def run
+    regexes = build_regex_list 
+    verbose = param['verbose'].given?
+    each_entry_with_lines do |entry, lines|
+      lineno = 0
+      lines.each do |line|
+        lineno += 1
+        if regexes.match(line)
+          if verbose
+            puts "#{ entry } +#{ lineno }: #{ line }"
+          else
+            puts "#{ entry }"
+            break
+          end
+        else
+          :nothing
+        end
+      end
+    end
+  end
+
+  def build_regex_list
+    file, re, sensitive, any = %w(file re sensitive any).map{|k| param[k]}
+    list = re.values
+    if file.given?
+      if file.value == '-'
+        list += load_regexs_from STDIN
+      else
+        list += open(file.value){|fd| load_regexs_from fd}
+      end
+    end
+    abort 'no regexs given' if list.empty?
+    list.map!{|re| sensitive.given ? %r/#{ re }/ : %r/#{ re }/i}
+    test = any.given ? 'any?' : 'all?'
+    singleton_class =
+      class << list
+        self
+      end
+    singleton_class.module_eval do
+      define_method(:match){|string| map{|re| re.match string}.send(test)}
+    end
+    list
+  end
+
+  def load_regexs_from src, dst = Array.new 
+    src.each do |line|
+      line.strip!
+      next if line.empty?
+      list << line
+    end
+    dst
+  end
+
+  def each_entry_with_lines
+    glob = File.join param['Directory'].value, '**', '**'
+    filters = build_filter_list
+    Dir.glob(glob) do |entry|
+      next unless filters.match(entry)
+      test ?f, entry or next
+      lines = IO.readlines entry rescue next
+      yield entry, lines
+    end
+  end
+
+  def build_filter_list
+    filter, all, sensitive, ignore = %w(Filter All Sensitive Ignore).map{|k| params[k]}
+    list = filter.values.flatten.map{|re| sensitive.given ? %r/#{ re }/ : %r/#{ re }/i}
+    ignore = ignore.values.flatten.map{|re| sensitive.given ? %r/#{ re }/ : %r/#{ re }/i}
+    test = all.given ? 'all?' : 'any?'
+    singleton_class =
+      class << list
+        self
+      end
+    singleton_class.module_eval do
+      define_method(:match) do |string|
+        return false if ignore.map{|re| re.match string}.any?
+        map{|re| re.match string}.send(test)
+      end
+    end
+    list
+  end
+}
+
+BEGIN {
+  begin
+    require 'rubygems'
+  rescue Exception
+    42
+  end
+}

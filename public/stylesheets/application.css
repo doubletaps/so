@@ -27,6 +27,11 @@ body {
 
 }
 
+#supports {
+	list-style-type: none;
+}
+
+
 #body_content_right {
 	width: 25%;
 	float: right;
@@ -59,6 +64,11 @@ body {
   background: #CCC;
 }
 
+#search {
+	float: right;
+	margin-right: 5em;
+}
+
 footer {
 	width: 100%;
 	margin: 2em auto;
@@ -73,6 +83,30 @@ footer {
 #privacy {
 	margin-bottom: 2em;
 	padding-left: 25em;
+}
+
+
+
+/* Search Page
+-----------------------------------*/
+
+#searchTitle {
+  font-size: 1.7em
+  padding: 15px;
+}
+
+.result-title {
+  padding: 5px 15px 5px;
+  font-size: 1.1em;
+}
+  .result-title {
+    color: #222;
+  }
+
+.result-body {
+  padding: 0 25px 10px;
+  border-bottom: 1px solid #ccc;
+  text-indent: 1em;
 }
 
 

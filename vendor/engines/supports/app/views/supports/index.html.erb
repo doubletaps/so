@@ -3,6 +3,11 @@
     <% @supports.each do |support| %>
       <li>
         <%= link_to support.title, support_path(support) %>
+        
+        <%= truncate  support.content, :length => 200,
+                          :omission => " ... #{link_to '.read_more', support_path(support)}",
+                          :preserve_html_tags => true %>
+        
       </li>
     <% end %>
   </ul>

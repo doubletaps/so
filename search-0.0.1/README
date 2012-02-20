@@ -1,0 +1,43 @@
+NAME
+  search
+
+SYNOPSIS
+  search Directory re re* [options]+
+
+URIS
+  http://codeforpeople.com/lib/ruby/
+  http://rubyforge.org/projects/codeforpeople/
+
+INSTALL
+  gem install search
+
+DESCRIPTION
+  search is a combination of find and grep.  it recursively traverses a
+  directory and searches all files for one or more regular expressions,
+  printing each file containing matches on stdout.  by default it ignores
+  repo directories like .cvs|.svn|.rcs
+
+PARAMETERS
+  Directory (1 -> Directory) 
+  re (-2 -> re) 
+  --Filter=Filter, -F (0 ~> list_of_string(Filter=.*)) 
+      limit searchs to files matching these regular expressions. may be 
+      given more than once 
+  --All=All, -A (0 ~> All) 
+      *all* Filters must match to be considered a success. default is that 
+      *any* Filter pattern matching is considered a success 
+  --Ignore=Ignore, -I (0 ~> list_of_string(Ignore=.svn,.cvs,.rcs)) 
+      ignore any file matching this list of patterns default(.svn|.cvs|.rcs) 
+  --Sensitive, -S 
+      conisder all Filters case sensitive. default is case insensitive 
+  --file=file, -f (0 ~> file) 
+      load a file full of patterns, one per line 
+  --sensitive, -s 
+      conisder all patterns case sensitive. default case insensitive 
+  --any, -a 
+      *any* pattern match is considered success. default is that *all* 
+      patterns must match 
+  --verbose, -v 
+      print every match with lineno information 
+  --help, -h 
+

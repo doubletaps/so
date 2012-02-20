@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/resolve/refinerycms-search.git
+  revision: 2cd70c61186df1f9cfcce16fb1497ee0838e2b0b
+  specs:
+    refinerycms-search (1.0.0)
+      refinerycms-core (>= 1.0.0)
+
 PATH
   remote: vendor/engines
   specs:
@@ -33,8 +40,8 @@ GEM
       activemodel (= 3.0.11)
       activesupport (= 3.0.11)
     activesupport (3.0.11)
-    acts-as-taggable-on (2.2.2)
-      rails (~> 3.0)
+    acts-as-taggable-on (2.1.1)
+      rails
     acts_as_indexed (0.7.7)
     arel (2.0.10)
     awesome_nested_set (2.1.2)
@@ -144,6 +151,9 @@ GEM
       globalize3 (~> 0.1)
       refinerycms-core (= 1.0.9)
       seo_meta (~> 1.1)
+    refinerycms-project_portfolios (0.0.6)
+      acts-as-taggable-on (~> 2.1.0)
+      refinerycms (~> 1.0.9)
     refinerycms-resources (1.0.9)
       activerecord (~> 3.0.10)
       dragonfly (~> 0.9.0)
@@ -171,10 +181,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts-as-taggable-on (~> 2.1.0)
   refinerycms (~> 1.0.9)
   refinerycms-blog (~> 1.6)
   refinerycms-i18n (~> 1.0.0)
   refinerycms-inquiries (~> 1.0)
   refinerycms-news (~> 1.2)
+  refinerycms-project_portfolios (~> 0.0.5)
+  refinerycms-search (~> 1.0.0)!
   refinerycms-supports (= 1.0)!
   sqlite3

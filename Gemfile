@@ -64,6 +64,11 @@ end
 gem 'refinerycms-inquiries',    '~> 1.0'
 gem "refinerycms-news",         '~> 1.2'
 gem 'refinerycms-blog',         '~> 1.6'
+gem 'refinerycms-search', '~> 1.0.0', :git => 'git://github.com/resolve/refinerycms-search.git'
+gem 'refinerycms-supports', '1.0', :path => 'vendor/engines'
+gem 'acts-as-taggable-on', '~>2.1.0'
+gem 'refinerycms-project_portfolios', '~>0.0.5'
+
 # gem 'refinerycms-page-images',  '~> 1.0'
 
 
@@ -72,4 +77,3 @@ gem 'refinerycms-i18n',         '~> 1.0.0'
 
 # END USER DEFINED
 
-gem 'refinerycms-supports', '1.0', :path => 'vendor/engines'

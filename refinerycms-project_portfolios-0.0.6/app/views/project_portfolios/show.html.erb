@@ -1,0 +1,51 @@
+<% content_for :body_content_title do %>
+  <%= @project_portfolio.project_name %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  <section>
+    <h1>Project Name</h1>
+    <p>
+      <%=raw @project_portfolio.project_name %>
+    </p>
+  </section>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%=raw @project_portfolio.title %>
+    </p>
+  </section>
+  <section>
+    <h1>Thumbnail</h1>
+    <p>
+      <%= render_thumbnail @project_portfolio %>
+    </p>
+  </section>
+  <section>
+    <h1>Tags</h1>
+    <p>
+      <%= @project_portfolio.tag_list %>
+    </p>
+  </section>
+  <section>
+    <h1>Description</h1>
+    <p>
+      <%=raw @project_portfolio.description %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :body_content_right do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="project_portfolios">
+      <% @project_portfolios.each do |project_portfolio| %>
+        <li>
+          <%= link_to project_portfolio.project_name, project_portfolio_path(project_portfolio) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

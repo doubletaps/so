@@ -10,7 +10,8 @@ width: 100%;
 }
 
 body {
-  background: #DDD;
+  background: #152F4D;
+	color: white;
   font-family: Verdana;
   font-size: 13px;
   line-height: 18px;
@@ -19,7 +20,7 @@ body {
 #body_content_left {
 	width: 65%;
 	float: left;
-	margin: 2em;
+	margin-left: 5em;
 	padding: 0px;
 }
 
@@ -35,7 +36,7 @@ body {
 #body_content_right {
 	width: 25%;
 	float: right;
-	margin: 2em;
+	margin-right: 2em;
 }
 
 #body_content_title {
@@ -55,14 +56,16 @@ body {
 }
 
 #menu ul li a {
+	color: #FFFFFF;
   display: block;
   padding: 5px 10px;
   text-decoration: none;
 }
 
 #menu ul li.selected a, #menu ul li a:hover {
-  background: #CCC;
+  color: #CCCCCC;
 }
+
 
 #search {
 	float: right;
@@ -71,17 +74,21 @@ body {
 
 footer {
 	width: 100%;
-	margin: 2em auto;
+	margin: 5em auto;
+}
+
+footer a {
+	color: white;
 }
 
 #copyright {
-	margin-left: 2em;
-	margin-bottom: 2em;
+	margin: 5em;
 	float: left;
 }
 
 #privacy {
-	margin-bottom: 2em;
+	float: right;
+	margin: 5em;
 	padding-left: 25em;
 }
 

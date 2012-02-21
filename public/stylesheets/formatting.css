@@ -5,9 +5,45 @@
 
 #logo {
   margin-right: 0;
-  width: 95%;
+	max-width: 100%;
   height: 165px;
   border-bottom: solid #AEAEAE 1px;
 /*  background: url(../images/logo.png) no-repeat;  */
 }
 
+
+.news_item a {
+	color: white;
+}
+
+.news_item_truncated a {
+	color: white;
+}
+
+#recent_news_items a {
+	color: white;
+}
+
+.blog_post a {
+	color: white;
+}
+
+#blog_posts a {
+	color: white;
+}
+
+.blog_post a {
+	color: white;
+}
+
+#rss_feed_subscribe {
+	color: white;
+}
+
+#next_prev_article a {
+	color: white;
+}
+
+#supports a {
+	color: white;
+}

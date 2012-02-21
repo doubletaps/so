@@ -15,5 +15,15 @@
                  :apply_css => true #if you don't care about class='first' class='last' or class='selected' set apply_css to false for speed.
                } -%>
   </ul>
+  
+  <div id="search">
+    <%= form_tag search_url do -%>
+    <%= text_field_tag :query, {}, {:type => "search",
+                       :placeholder => "Search site for...", 
+                       :value => (params[:query] if params[:query])} %>
+    <%= submit_tag 'Search' %>
+    <% end %>
+  </div>
+  
 </nav>
 <% end -%>

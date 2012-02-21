@@ -1,27 +1,6 @@
 <h1 id='logo'>
   <%= link_to logo, root_path %>
 </h1>
-<div id="search">
-  <%= form_tag search_url do -%>
-  <%= text_field_tag :query, {}, {:type => "search",
-                     :placeholder => "Search site for...", 
-                     :value => (params[:query] if params[:query])} %>
-  <%= submit_tag 'Go' %>
-  <% end %>
-</div>
-
-
-
-<!--
-<div id="search">
-  <form accept-charset="UTF-8" action="/search" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="NGuLxd5isEHlhQhhs27IEsP6Sd01pTn7GLJDIUIj2S8=" /></div>
-    <input name="query" type="text" size="32" value="Search the site" 
-            onfocus="this.value = this.value=='Search the site'?'':this.value;" onblur="this.value = this.value==''?'Search the site':this.value;">            
-  </form>        
-</div>
-
-end search -->
-
 
 <%= render(:partial => "/shared/menu", :locals => {
              :dom_id => 'menu',

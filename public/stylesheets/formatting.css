@@ -24,26 +24,29 @@
 	color: white;
 }
 
-.blog_post a {
+.blog_post h1 a {
 	color: white;
+	font-size: 100%;
 }
 
 #blog_posts a {
 	color: white;
+	font-size: 100%;
 }
 
 .blog_post a {
 	color: white;
+	font-size: 100%;
 }
 
 #rss_feed_subscribe {
 	color: white;
 }
 
-#next_prev_article a {
-	color: white;
+
 }
 
 #supports a {
 	color: white;
+	font-size: 100%;
 }

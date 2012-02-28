@@ -4,12 +4,90 @@
 */
 
 #logo {
-  margin-right: 0;
+	padding-top: .1em;
 	max-width: 100%;
-  height: 165px;
-  border-bottom: solid #AEAEAE 1px;
+	overflow: hidden;
+	border-bottom: .1em solid black;
 /*  background: url(../images/logo.png) no-repeat;  */
 }
+
+/* portfolio grid layout */
+
+.pproduct-portfolio-grid {
+	margin: 4em 2em 2em 2em;
+}
+
+.pportfolio-row: {
+	clear: both;
+	float: left;
+}
+
+.pportfolio-box {
+	margin: 1em 3em;
+	height: 150px;
+	border: 2px solid #152F77;
+	-webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 5px;
+  border: 2px solid #152F77;
+	background: -webkit-gradient(linear, left top, left bottom, from(#152F4D), to(#152F7D));
+  background: -webkit-linear-gradient(top, #152F4D, #152F7D);
+  background: -moz-linear-gradient(top, #152F4D, #152F7D);
+  background: -ms-linear-gradient(top, #152F4D, #152F7D);
+  background: -o-linear-gradient(top, #152F4D, #152F7D);
+}
+
+.pportfolio-box img {
+
+	margin: 0.5em auto;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+
+} 
+.pportfolio-box p {
+	text-align: center;
+	color: red;
+}
+
+.pportfolio-box a {
+	text-decoration: none;
+}
+
+.pportfolio-box:hover {
+
+   background: #666666;
+   color: #ccc;
+   }
+
+#pportfolio-grid {
+	width: 100%;
+	padding: 3em;
+}
+
+#pportfolio-grid img {
+	display: inline;
+	max-width: 100%;
+	float: left;
+	border: 2px solid white;
+	margin: 2em;
+}
+
+#pportfolio-grid a {
+		text-decoration: none;
+}
+
+.thumbnail-box {
+  padding: 7px 10px 7px 7px;
+}
+
+.thumbnail-box img {
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+   border: 2px solid #152F77;
+}
+
 
 
 .news_item a {

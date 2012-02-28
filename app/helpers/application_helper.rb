@@ -1,6 +1,6 @@
 module ApplicationHelper
   
   def logo
-    image_tag ("/images/logo.png")
+    image_tag ("/images/so_logo.png")
   end
 end

@@ -4,14 +4,57 @@
 */
 
 #logo {
-	padding-top: .1em;
-	max-width: 100%;
-	overflow: hidden;
-	border-bottom: .1em solid black;
+
+	margin-left: 10%;
+	width: 50%;
+	padding-top: .5em;
+
+
+
 /*  background: url(../images/logo.png) no-repeat;  */
 }
 
-/* portfolio grid layout */
+#logo img {
+		max-width: 100%;
+		overflow: hidden;
+}
+
+h3 a img {
+	max-width: 100%;
+}
+
+/* Apps page product content */
+.meo-info {
+	display: block;
+}
+
+.meo-videos, .meo-testimonials, .meo-support {
+	display: none;
+} 
+
+
+/* rollover images */
+
+.meo_ro:hover {
+
+	}
+
+
+/* Apps page portfolio grid layout */
+
+#app-portfolio img:hover {
+
+  
+  -webkit-box-shadow: 0 10px 0 rgba(255, 255, 255, .15);
+  -moz-box-shadow: 0 10px 0 rgba(255, 255, 255, .15);
+  box-shadow: 0 10px 0 rgba(255, 255, 255, .15);
+}
+
+
+.block img {
+	max-width: 100%;
+	height: auto;
+}
 
 .pproduct-portfolio-grid {
 	margin: 4em 2em 2em 2em;

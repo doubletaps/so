@@ -6,24 +6,35 @@
     css = [(css || 'menu'), 'clearfix'].flatten.join(' ')
     hide_children = RefinerySetting.find_or_set(:menu_hide_children, false) if hide_children.nil?
 -%>
-<nav id='<%= dom_id %>' class='<%= css %>'>
-  <ul>
-    <%= render :partial => '/shared/menu_branch', :collection => roots,
-               :locals => {
-                 :hide_children => hide_children,
-                 :sibling_count => (roots.length - 1),
-                 :apply_css => true #if you don't care about class='first' class='last' or class='selected' set apply_css to false for speed.
-               } -%>
-  </ul>
+
+  <div id="menu_bar">
+    <nav id='<%= dom_id %>' class='<%= css %> '>
+
+        <ul>
+          
+
+          <%= render :partial => '/shared/menu_branch', :collection => roots,
+                     :locals => {
+                       :hide_children => hide_children,
+                       :sibling_count => (roots.length - 1),
+                       :apply_css => true #if you don't care about class='first' class='last' or class='selected' set apply_css to false for speed.
+                     } -%>
+
+        </ul>
+
   
-  <div id="search">
-    <%= form_tag search_url do -%>
-    <%= text_field_tag :query, {}, {:type => "search",
-                       :placeholder => "Search site for...", 
-                       :value => (params[:query] if params[:query])} %>
-    <%= submit_tag 'Search' %>
-    <% end %>
+      <div id="search">
+        <div class="search_form">
+          <%= form_tag search_url do -%>
+          <%= text_field_tag :query, {}, {:type => "search",
+                             :placeholder => "Search site for...", 
+                             :value => (params[:query] if params[:query])} %>
+          <%= submit_tag 'Search' %>
+          <% end %>
+        </div>
+      </div>
+
+    </nav>
   </div>
-  
-</nav>
+
 <% end -%>

@@ -8,24 +8,39 @@
 
 }
 
+#page {
+	border-top: .25em solid black;
+}
+
 #page_container {
+	width: 100%;
+	margin: 0 auto;
 
 }
 
 
 
-h1 {
-	font-size: 1.5em;  /* 24px / 16px */
-	font-style: italic;
+#body_content_left h1 {
+
+	font-size: 5em; 
+	color: #D1D3D4;
 	font-weight: normal;
+}
+
+#body_content_left h2 {
+	margin-bottom: 0;
+	font-size: 3em; 
+	color: #D1D3D4;
+	font-weight: bold;
 }
 
 header h1 {
 	margin:0;
+	max-width: 100%;
 }
 
 body {
-	background-color: white;
+
 	color: #58595B;
 	font: normal 100% Verdana;
 	width: 100%;
@@ -34,14 +49,14 @@ body {
 
 #body_content {
 	margin: 0 auto;
+	width: 80%;
 
 }
 
 #body_content_left {
 	margin: 0;
-	padding: 1em;
-	border: 0px solid #152F77;
-	width: 60%;
+	padding: 0em;
+	width: 65%;
 	float: left;
 
 }
@@ -60,14 +75,21 @@ body {
 
 
 #body_content_right {
-
-	margin: 0;
-	padding: 1em;
-	border: 2px solid #152F77;
-	background-color: white;
+	color: #164D6C;
+	margin: 0 auto;
+	padding-left: 0;
+	padding-top: 1em;
 	width: 30%;
 	float: right;
+	-webkit-box-shadow: inset 10px 0px 20px -20px #888;
+	   -moz-box-shadow: inset 10px 0px 20px -20px #888;
+	        box-shadow: inset 10px 0px 20px -20px #888;
+}
 
+#body_content_right img {
+
+	height: auto;
+	max-width: 100%;
 }
 
 #body_content_title {
@@ -75,29 +97,37 @@ body {
 }
 
 #menu {
-	padding-bottom: 0;
+	padding-top: .5em;
+	
+	margin: 0 auto;
+	width: 80%;
 
-	background: -webkit-gradient(linear, left top, left bottom, from(#135A7A), to(#164D6C));
-  background: -webkit-linear-gradient(top, #135A7A, #164D6C);
-  background: -moz-linear-gradient(top, #135A7A, #164D6C);
-  background: -ms-linear-gradient(top, #135A7A, #164D6C);
-  background: -o-linear-gradient(top, #135A7A, #164D6C);
+
+
+}
+
+#menu_bar {
+	background: -webkit-gradient(linear, left top, left bottom, from(#164D6C), to(#135A7A));
+  background: -webkit-linear-gradient(top, #164D6C, #135A7A);
+  background: -moz-linear-gradient(top, #164D6C, #135A7A);
+  background: -ms-linear-gradient(top, #164D6C, #135A7A);
+  background: -o-linear-gradient(top, #164D6C, #135A7A);
   -webkit-box-shadow: 0 0px 5px 0px black;
   -moz-box-shadow: 0 0px 5px 0px black;
   box-shadow: 0 0px 5px 0px black;
+
 }
 
 #menu ul {
   list-style: none;
-  float: right;
-	margin: 1em 2em 0 0;
+	float: right;
+	margin: 0;
 
   padding: 0px;
-
 }
 
 #menu ul li {
-	font-size: .75em;
+	font-size: 1.2em;
   margin-right: 0em;
 }
 
@@ -115,39 +145,105 @@ body {
 
 #search {
 	clear: both;
+	padding-top: .25em;
+
+
+}
+
+.search_form {
 	float: right;
-	margin: 0.5em 2em 0 0;
-	padding-bottom: .25em;
+	padding-bottom: 0.5em;
+}
+
+/* sidebar */
+
+#body_content_right .inner {
+	width: 90%;
+}
+
+#body_content_right .sidebar {
+
+}
+
+#body_content_right .sidebar a img{
+	height: auto;
+	max-width: 100%;
+	margin: 0.5em auto;
+}
+
+.sidebar_images img:hover {
+
 }
 
 
-footer #footer {
-	color: #D1D3D4;
-	border: 2px solid #FF0000;
+
+footer .foot {
+	height: auto;
+	max-width: 100%;
+	color: white;
+	padding: 1em 1em 2em 1em;
 	background: -webkit-gradient(linear, left top, left bottom, from(#135A7A), to(#164D6C));
   background: -webkit-linear-gradient(top, #135A7A, #164D6C);
   background: -moz-linear-gradient(top, #135A7A, #164D6C);
   background: -ms-linear-gradient(top, #135A7A, #164D6C);
   background: -o-linear-gradient(top, #135A7A, #164D6C);
+}
+
+.foot_items {
+
+	margin: 0 auto;
 
 }
 
-footer a {
+.foot_items img {
+
+
+}
+
+.foot p {
+	margin-bottom: 0;
+}
+
+.footer a {
 	color: #188DCD;
 }
 
-#copyright {
-	margin: 5em;
+.office_info  {
+	color: #D1D3D4;
+	margin: 0;
+}
+
+.email_address {
 	float: left;
+
+
+}
+
+#copyright {
+	color: #D1D3D4;
+	float: right;
+
 }
 
 #privacy {
 	float: right;
-	margin: 5em;
-	padding-left: 25em;
+	margin: 0;
+
 }
 
+/* My Eyes Only Page
+-----------------------------------*/
 
+.meo-trio img {
+	max-width: 100%;
+	overflow: hidden;
+	height: auto;
+}
+
+.gradient-border {
+	height: 3em;
+	
+}
 
 /* Search Page
 -----------------------------------*/
@@ -171,7 +267,7 @@ footer a {
   text-indent: 1em;
 }
 
-/* Some Blueprin Classes -----------------------------------*/
+/* Some Blueprint Classes -----------------------------------*/
 
 /* A container should group your entire grid. */
 .container {
@@ -219,6 +315,143 @@ to create any composition of columns in a layout. */
 .span-22 { width: 91%; }
 .span-23 { width: 95%; }
 .span-24 { width: 100%; margin-right: 0; }
+
+/* Segmented Control */
+
+.segmented-control {
+
+    list-style-type: none;
+    width: auto;
+    height: auto;
+    padding: 0px;
+    margin: 0 auto;
+    
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .15);
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .15);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .15);
+}
+
+.segmented-control li {
+    background-color: #EEEEEE;
+    float: left;
+    margin-left: 0px;
+		width: 25%;
+}
+
+.segmented-control li,
+.segmented-control.alt li:target,
+.segmented-control.alt li:target:active {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .1)), to(rgba(255, 255, 255, 0)));
+    
+    background-image: -moz-linear-gradient(0 0 -90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, 0));
+}
+
+.segmented-control li, .segmented-control.alt li:target {
+    -webkit-box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .1);
+    -moz-box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .1);
+    box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .1);
+}
+
+.segmented-control li:first-child {
+    margin-left: 0;
+    
+    -webkit-border-top-left-radius: 20px;
+    -webkit-border-bottom-left-radius: 20px;
+    -moz-border-radius-topleft: 20px;
+    -moz-border-radius-bottomleft: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.segmented-control li:last-child {
+    -webkit-border-top-right-radius: 20px;
+    -webkit-border-bottom-right-radius: 20px;
+    -moz-border-radius-topright: 20px;
+    -moz-border-radius-bottomright: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.segmented-control a {
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 24px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.segmented-control a,
+.segmented-control.alt li:target a {
+    color: #262626;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .15);
+}
+
+.segmented-control li:active {background-color: #525252;}
+
+.segmented-control li:active,
+.segmented-control.alt li:target:active {
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, .15),
+                        inset 0 0 5px rgba(0, 0, 0, .1);
+    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, .15),
+                     inset 0 0 5px rgba(0, 0, 0, .1);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, .15),
+                inset 0 0 5px rgba(0, 0, 0, .1);
+}
+
+.segmented-control li:active a,
+.segmented-control.alt li:active a {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .1);
+    position: relative;
+    top: 1px;
+}
+
+.segmented-control li:target {
+    background-image:
+        -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, .1))),
+        url(../images/demos/background-segmented-control-selected.png);
+    
+    background-image:
+        -moz-linear-gradient(0% 0% -90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, .1)),
+        url(../images/demos/background-segmented-control-selected.png);
+    
+    background-color: #333;
+    
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .1),
+                        inset 0 0 5px rgba(0, 0, 0, .15);
+    -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .1),
+                     inset 0 0 5px rgba(0, 0, 0, .15);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .1),
+                inset 0 0 5px rgba(0, 0, 0, .15);
+}
+
+.segmented-control.alt li:target {background-color: #4e4e4e;}
+
+.segmented-control li:target a {color: #fff; text-shadow: 0 1px 0 #000;}
+
+.segmented-control li:target:active {
+    background-image:
+        -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, .05))),
+        url(../images/demos/background-segmented-control-selected.png);
+        
+    background-image:
+        -moz-linear-gradient(0% 0% -90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, .05)),
+        url(../images/demos/background-segmented-control-selected.png);
+    
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .15),
+                        inset 0 0 5px rgba(0, 0, 0, .15);
+    -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .15),
+                     inset 0 0 5px rgba(0, 0, 0, .15);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .15),
+                inset 0 0 5px rgba(0, 0, 0, .15);
+}
+
 
 
 

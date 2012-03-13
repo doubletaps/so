@@ -24,11 +24,11 @@ h3 a img {
 }
 
 /* Apps page product content */
-.meo-info {
+.app-info {
 	display: block;
 }
 
-.meo-videos, .meo-testimonials, .meo-support {
+.app-videos, .app-testimonials, .app-support {
 	display: none;
 } 
 

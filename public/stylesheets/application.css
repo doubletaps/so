@@ -27,11 +27,55 @@
 	font-weight: normal;
 }
 
-#body_content_left h2 {
-	margin-bottom: 0;
+#top_body {
+	margin: 0;
+	width: 100%;
+}
+
+#top_body h2 {
+	margin: 0;
 	font-size: 3em; 
 	color: #D1D3D4;
 	font-weight: bold;
+}
+
+
+/* Segmented Control */
+
+.segmented-control {
+		font-size: 1em;
+    list-style-type: none;
+    width: 50%;
+    height: auto;
+    padding-left: 0px;
+ 		padding-bottom: 3em;
+    margin: 0;
+    
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .15);
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .15);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .15);
+}
+
+.meo-gradient {
+	height: 0.25em;
+	background: -webkit-gradient(linear, left center, right center,
+	color-stop(0%, #FFFFFF), color-stop(50%, #BBBBBB),
+	color-stop(100%, #FFFFFF));
+	background: -moz-linear-gradient(left, #FFFFFF 0%, #BBBBBB 50%,
+	#FFFFFF 100%);
+	
+}
+
+#meo-testimonials {
+	max-width: 50%;
+}
+
+.app-trio {
+	padding-top: 1em;
 }
 
 header h1 {
@@ -92,6 +136,13 @@ body {
 	max-width: 100%;
 }
 
+#bottom_body {
+	margin: 0;
+	width: 100%;
+	clear: both;
+}
+
+
 #body_content_title {
 	display: none;
 }
@@ -101,9 +152,6 @@ body {
 	
 	margin: 0 auto;
 	width: 80%;
-
-
-
 }
 
 #menu_bar {
@@ -190,14 +238,11 @@ footer .foot {
 }
 
 .foot_items {
-
 	margin: 0 auto;
-
 }
 
 .foot_items img {
-
-
+	max-width: 20%;
 }
 
 .foot p {
@@ -316,30 +361,13 @@ to create any composition of columns in a layout. */
 .span-23 { width: 95%; }
 .span-24 { width: 100%; margin-right: 0; }
 
-/* Segmented Control */
-
-.segmented-control {
-
-    list-style-type: none;
-    width: auto;
-    height: auto;
-    padding: 0px;
-    margin: 0 auto;
-    
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    
-    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .15);
-    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .15);
-    box-shadow: 0 1px 0 rgba(255, 255, 255, .15);
-}
 
 .segmented-control li {
     background-color: #EEEEEE;
+		border: 1px solid #AAAAAA;
     float: left;
     margin-left: 0px;
-		width: 25%;
+		width: 20%;
 }
 
 .segmented-control li,
@@ -377,23 +405,32 @@ to create any composition of columns in a layout. */
 }
 
 .segmented-control a {
+
     font-size: 1em;
-    font-weight: bold;
+    font-weight: normal;
     line-height: 24px;
     text-align: center;
     text-decoration: none;
     display: block;
-    width: 100%;
+
+		
     height: auto;
 }
 
 .segmented-control a,
 .segmented-control.alt li:target a {
-    color: #262626;
+		color: #188DCD;
     text-shadow: 0 1px 0 rgba(255, 255, 255, .15);
 }
 
-.segmented-control li:active {background-color: #525252;}
+.segmented-control a:hover {
+	color: #999999;
+}
+
+.segmented-control li:active {
+	background-color: #525252;
+	color: white;
+}
 
 .segmented-control li:active,
 .segmented-control.alt li:target:active {
@@ -421,7 +458,7 @@ to create any composition of columns in a layout. */
         -moz-linear-gradient(0% 0% -90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, .1)),
         url(../images/demos/background-segmented-control-selected.png);
     
-    background-color: #333;
+    background-color: #999999;
     
     -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .1),
                         inset 0 0 5px rgba(0, 0, 0, .15);
@@ -450,6 +487,75 @@ to create any composition of columns in a layout. */
                      inset 0 0 5px rgba(0, 0, 0, .15);
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, .15),
                 inset 0 0 5px rgba(0, 0, 0, .15);
+}
+
+/* next app arrow button */
+
+#ios-arrow-left {
+		float: right;
+		margin: 1em 0 1em 0;
+    background-repeat:repeat-x;
+    background-color: rgba(74,108,155,1);/*change this and the background color for the :before element*/
+    background-image : -webkit-linear-gradient(
+        bottom,
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,0) 50%,
+        rgba(255,255,255,0.1) 50%,
+        rgba(255,255,255,0.3) 100%
+        );
+    height:30px;
+		max-width: 10%;
+    padding: 0 10px 0 8px;
+    z-index : 0;
+    border-radius: 6px;
+    -webkit-border-top-left-radius : 10px 15px;
+    -webkit-border-bottom-left-radius : 10px 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    box-shadow :-1px -1px 0px rgba(0,0,0,0.2)inset,
+        0 1px 2px rgba(0,0,0,0.8)inset;
+    font-size : 11px;
+    display : block;
+    text-align:center;
+    color:#fff;
+    text-shadow : 0px -1px 0px #000;
+    line-height : 30px;
+    font-family : HelveticaNeue;
+    font-weight: 700;
+    -webkit-background-size : 30px;
+}
+
+
+#ios-arrow-left:before{
+    position:absolute;
+    top:9.9%;
+    left:-5px;
+    -webkit-background-size : 22px 22px;
+    background-position :-2px -1.5px;
+    background-color: rgba(74,108,155,1);/*change to the same as the main element*/
+    background-image :
+        -webkit-gradient(linear, left bottom, right top,
+            from(rgba(0,0,0,0)),
+            color-stop(0.5, rgba(0,0,0,0)),
+            color-stop(0.5, rgba(255,255,255,0.1)),
+            to(rgba(255,255,255,0.3)));
+    height : 25px;
+    width: 25px;
+    -webkit-transform : rotate(-45deg) skew(-10deg, -10deg);
+    -webkit-border-top-right-radius : 100px 40px;
+    -webkit-border-top-left-radius : 30px 2px;
+    -webkit-border-bottom-right-radius : 2px 30px;
+    -webkit-border-bottom-left-radius : 40px 100px;
+    z-index : 1;
+    content : ' ';
+    border-left : 1.5px solid rgba(255,255,255,0.3);
+    box-shadow :  1px 1px 0 rgba(0,0,0,0.2) inset,
+        -1px 1px 1px rgba(0,0,0,0.5) inset;
+    -webkit-mask-image :
+        -webkit-gradient(linear, left top, right bottom,
+            from(#000000),
+            color-stop(0.33,#000000),
+            color-stop(0.5, transparent),
+            to(transparent));
 }
 
 

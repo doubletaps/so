@@ -9,6 +9,37 @@ $(function() {
 $(document).ready(function() {	
 	$('.segmented-control a').mouseover(function() {
 		
+		if	($(this).attr('data-hover') == 'app-info')  {
+						$('.app-info').fadeIn(1000);
+						}
+			else { 
+						$('.app-info').hide();
+						}
+
+			if	($(this).attr('data-hover') == 'app-videos')  {
+							$('.app-videos').fadeIn(1000);
+							}
+				else { 
+							$('.app-videos').hide();
+							}
+	
+			if	($(this).attr('data-hover') == 'app-testimonials')  {
+							$('.app-testimonials').fadeIn(1000);
+							}
+				else { 
+							$('.app-testimonials').hide();
+							}
+							
+			if	($(this).attr('data-hover') == 'app-support')  {
+							$('.app-support').fadeIn(1000);
+							}
+				else { 
+							$('.app-support').hide();
+							}
+	});	// end mouseover		 
+	
+	$('.segmented-control a').click(function() {
+		
 		if	($(this).attr('data-hover') == 'meo-info')  {
 						$('.meo-info').fadeIn(1000);
 						}
@@ -36,6 +67,6 @@ $(document).ready(function() {
 				else { 
 							$('.meo-support').hide();
 							}
-	});	// end mouseover		 
+	});	// end click
 }); // end ready
 	

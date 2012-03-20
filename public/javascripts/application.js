@@ -68,5 +68,24 @@ $(document).ready(function() {
 							$('.meo-support').hide();
 							}
 	});	// end click
+	
+	var $body = $('body');
+	
+	var setFontSize = function() {
+		var fontSize = 100;
+	
+		fontSize = $body.width() / 10;
+
+		$('body').css('font-size', fontSize + '%');	
+		$('head').css('font-size', fontSize + '%');			
+	}
+	
+	$(window).resize(function() {
+		setFontSize();
+	});  // end font resize
+	
+
+	
+	
 }); // end ready
 	

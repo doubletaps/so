@@ -1,0 +1,15 @@
+<%= render(:partial => "/shared/menu", :locals => {
+             :dom_id => 'menu',
+             :css => 'menu'
+           }) %>
+
+<div id='logo'>
+  <%= link_to logo, root_path %>
+
+</div>
+
+<div class="right-header">
+  <%= raw @page.content_for(:right_header) %>
+</div>
+
+

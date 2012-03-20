@@ -9,7 +9,7 @@
 }
 
 #page {
-	border-top: .25em solid black;
+	
 }
 
 #page_container {
@@ -18,7 +18,17 @@
 
 }
 
+#left_header {
+	float: left;
+	width: 50%;
+	margin-top: 1em;
+}
 
+#right_header {
+	margin-top: 1em;
+	float: right;
+	width: 45%;
+}
 
 #body_content_left h1 {
 
@@ -28,8 +38,16 @@
 }
 
 #top_body {
+	clear: both;
 	margin: 0;
 	width: 100%;
+}
+#top_body h1 {
+	margin: 0.25em 0 0.25em 0;
+	font-size: 5em; 
+	color: #D1D3D4;
+	font-weight: bold;
+	
 }
 
 #top_body h2 {
@@ -40,15 +58,24 @@
 }
 
 
+.top-body-gradient {
+
+	height: 0.5em;
+	background: -webkit-gradient(linear, left top, left bottom, 
+		from(#555555), to(#FFFFFF));
+	background: -moz-linear-gradient(top, #555555, #FFFFFF);
+}
+
+
 /* Segmented Control */
 
 .segmented-control {
-		font-size: 1em;
+		font-size: .75em;
     list-style-type: none;
-    width: 50%;
+    width: 60%;
     height: auto;
     padding-left: 0px;
- 		padding-bottom: 3em;
+ 		padding-bottom: 5em;
     margin: 0;
     
     -webkit-border-radius: 4px;
@@ -60,6 +87,8 @@
     box-shadow: 0 1px 0 rgba(255, 255, 255, .15);
 }
 
+
+
 .meo-gradient {
 	height: 0.25em;
 	background: -webkit-gradient(linear, left center, right center,
@@ -70,12 +99,20 @@
 	
 }
 
-#meo-testimonials {
-	max-width: 50%;
+#app-testimonials {
+	min-width: 30%;	
+}
+#app-support  {
+	min-width: 25%;
 }
 
 .app-trio {
 	padding-top: 1em;
+}
+
+.app-trio img {
+	max-width: 100%;
+	height: auto;
 }
 
 header h1 {
@@ -98,7 +135,8 @@ body {
 }
 
 #body_content_left {
-	margin: 0;
+	margin: 1em 0 1em 0;
+
 	padding: 0em;
 	width: 65%;
 	float: left;
@@ -149,7 +187,7 @@ body {
 
 #menu {
 	padding-top: .5em;
-	
+	white-space: nowrap;
 	margin: 0 auto;
 	width: 80%;
 }
@@ -175,11 +213,12 @@ body {
 }
 
 #menu ul li {
-	font-size: 1.2em;
+	font-size: 1em;
   margin-right: 0em;
 }
 
 #menu ul li a {
+	max-width: 100%;
 	color: #188DCD;
   display: block;
   padding-left: 1em;

@@ -24,10 +24,20 @@
 	margin-top: 1em;
 }
 
+#left_header img {
+	max-width: 100%;
+	height: auto;
+}
+
 #right_header {
 	margin-top: 1em;
 	float: right;
 	width: 45%;
+}
+
+#right_header img {
+	max-width: 100%;
+	height: auto;
 }
 
 #body_content_left h1 {
@@ -58,6 +68,7 @@
 }
 
 
+
 .top-body-gradient {
 
 	height: 0.5em;
@@ -75,8 +86,8 @@
     width: 60%;
     height: auto;
     padding-left: 0px;
- 		padding-bottom: 5em;
-    margin: 0;
+ 		padding-bottom: 2em;
+    margin: 0 0 2em 0;
     
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;

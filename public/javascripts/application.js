@@ -84,8 +84,33 @@ $(document).ready(function() {
 		setFontSize();
 	});  // end font resize
 	
+	var setSideBodyHeight = function() {
 
+		var $mainBody = $('#body_content_left');
+		var $sideBody = $('#body_content_right');
+				
 	
+
+		sideBodyHeight = $sideBody.innerHeight();
+		equalHeight = $mainBody.innerHeight();		
+
+		if (sideBodyHeight > equalHeight) {	equalHeight = sideBodyHeight;}
+//		alert(equalHeight);		
+//		$('#body_content_left').css('height', equalHeight );	
+//		$('#body_content_right').css('height', equalHeight);	
+//		alert($sideBody.height());
+//		alert($mainBody.innerHeight());
+//		alert(equalHeight);	
+	}
 	
+	$(window).resize(function() {
+		setSideBodyHeight();
+		
+	});  // end side body resize
+	
+	setFontSize();
+	setSideBodyHeight();
+	
+
 }); // end ready
 	
